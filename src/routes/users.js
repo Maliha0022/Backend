@@ -5,7 +5,7 @@ const { verifyToken, checkRole } = require('../middlewares/authMiddleware')
 // router.use(bodyParser.urlencoded({ extended: false }));
 // router.use(bodyParser.json());
 
-router.get("/getAllUser",checkRole('admin'), getUser);
+router.get("/getAllUser", getUser);
 router.post("/addUser", addUser);
 router.get("/getUser", verifyToken , getUserByEmail);
 router.delete("/deleteUser", deleteUser);

@@ -7,10 +7,10 @@ app.use(cors())
 
 let connectToDatabase = require("./connectDb")
 let users = require("./src/routes/users");
-let books = require("./src/routes/books")
+
 
 app.use("/users", users);
-app.use("/books", books);
+
 
 mongoose.set("strictQuery", false);
 connectToDatabase();
